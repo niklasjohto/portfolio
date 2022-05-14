@@ -8,3 +8,5 @@ Made with:
 - TypeScript
 - Sass
 - Framer
+
+Deployed using <a target="_blank" href="https://vercel.com">Vercel</a>

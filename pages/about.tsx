@@ -16,7 +16,7 @@ const About: NextPage = () => {
       <PageHead title="about" />
       <Layout>
         <Hero>
-          <h2 className={Style.content__title}>
+          <h2 className={Style.body__title}>
             {textToSpans("VIDEO GAMES,HOUSEPLANTS,EVERYTHING IT.", {
               initial: { opacity: 0, y: -25 },
               animate: { opacity: 1, y: 0 },
@@ -28,7 +28,7 @@ const About: NextPage = () => {
               },
             })}
           </h2>
-          <MdKeyboardArrowDown className={Style.content__arrow} />
+          <MdKeyboardArrowDown className={Style.body__arrow} />
         </Hero>
         <Profile />
       </Layout>
