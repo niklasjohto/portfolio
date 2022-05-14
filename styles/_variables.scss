@@ -66,11 +66,14 @@ $break-desktop: 1268px;
   opacity: 0;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: opacity 250ms ease-in-out, filter 100ms ease-in;
   font-family: $big-font;
   font-size: 1rem;
 
   display: grid;
   place-items: center;
   font-weight: bold;
+
+  @media screen and (min-width: $break-desktop) {
+    transition: opacity 250ms ease-in-out, filter 100ms ease-in;
+  }
 }
