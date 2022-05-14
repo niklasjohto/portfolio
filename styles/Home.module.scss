@@ -1,0 +1,72 @@
+@import "variables";
+@import "fonts";
+
+.wrapper {
+  @include page;
+
+  section[data-section="Hero"] {
+    .content__title {
+      font-size: clamp(2.75rem, 10vw, 6rem);
+      color: $dark-3;
+      width: 9ch;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .content__location {
+      font-size: clamp(1.75rem, 7.5vw, 4rem);
+      font-weight: normal;
+      color: $dark-2;
+    }
+
+    .content__contact {
+      margin-top: 4rem;
+      font-size: clamp(2rem, 8vw, 3.75rem);
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .contact__cursor {
+        @include contact-cursor;
+      }
+
+      .contact__email {
+        width: 12ch;
+        user-select: none;
+        cursor: none;
+
+        &:hover {
+          span {
+            display: initial;
+          }
+        }
+      }
+
+      .contact__socials {
+        display: flex;
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        column-gap: 1rem;
+        font-family: $normal-font;
+
+        .socials__link {
+          color: $dark-1;
+          text-decoration: none;
+          @include underline(3px, $dark-1);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $break-desktop) {
+  .wrapper {
+    section[data-section="Hero"] {
+      .content__contact {
+        margin-top: auto;
+      }
+    }
+  }
+}

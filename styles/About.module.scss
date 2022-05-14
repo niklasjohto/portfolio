@@ -1,0 +1,32 @@
+@import "variables";
+@import "fonts";
+
+.wrapper {
+  @include page;
+
+  section[data-section="Hero"] {
+    .content__title {
+      font-size: clamp(2.25rem, 10vw, 5rem);
+      color: $dark-3;
+      width: 11.65ch;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .content__arrow {
+      margin-top: 4rem;
+      font-size: clamp(5rem, 15vw, 7.5rem);
+    }
+  }
+}
+
+@media screen and (min-width: $break-desktop) {
+  .wrapper {
+    section[data-section="Hero"] {
+      .content__arrow {
+        margin-top: auto;
+      }
+    }
+  }
+}

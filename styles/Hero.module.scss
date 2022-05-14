@@ -1,0 +1,49 @@
+@import "variables";
+
+.main__hero {
+  height: auto;
+
+  font-family: $big-font;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.3fr;
+  gap: 1rem;
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+
+    .content__body {
+      margin-top: 4rem;
+
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .hero__image {
+    background: url("../public/images/plant.jpg") no-repeat;
+    background-size: cover;
+    background-position: right;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: $break-tablet) {
+  .main__hero {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: $break-desktop) {
+  .main__hero {
+    flex-grow: 1;
+    gap: 3rem;
+    height: calc(100vh - 4rem);
+
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: auto;
+  }
+}

@@ -1,0 +1,55 @@
+@import "variables";
+
+.main__projects {
+  .projects__title {
+    color: $dark-3;
+    font-family: $big-font;
+    font-size: clamp(3rem, 3vw, 3.5rem);
+  }
+
+  .projects__list {
+    margin-top: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+
+    .list__project {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .project__title {
+        font-size: clamp(1.9rem, 5.25vw, 3rem);
+        color: $dark-2;
+        text-decoration: none;
+        @include underline(3px, $dark-2);
+      }
+
+      .project__desc {
+        font-size: clamp(1.5rem, 3vw, 1.75rem);
+      }
+
+      .project__langs {
+        margin-top: 4rem;
+
+        display: flex;
+        column-gap: 2rem;
+
+        .langs__lang {
+          font-size: clamp(1rem, 2.5vw, 1.25rem);
+          padding: 0.5rem;
+          border-radius: 5px;
+          border: 2px solid $gray;
+          color: $dark-2;
+        }
+      }
+    }
+
+    hr {
+      width: 100%;
+      border: none;
+      height: 2px;
+      background: $gray;
+    }
+  }
+}

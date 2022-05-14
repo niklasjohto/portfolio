@@ -1,0 +1,30 @@
+@import "variables";
+
+.wrapper__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  text-align: right;
+
+  .footer__year {
+    display: none;
+  }
+
+  .footer__name {
+    color: $dark-2;
+  }
+}
+
+@media screen and (min-width: $break-desktop) {
+  .wrapper__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    .footer__year {
+      display: initial;
+    }
+  }
+}

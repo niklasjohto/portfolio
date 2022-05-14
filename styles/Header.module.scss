@@ -1,0 +1,39 @@
+@import "variables";
+
+.content__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-family: $normal-font;
+
+  .header__title {
+    color: $dark-2;
+    font-size: 1.75rem;
+    display: none;
+    cursor: pointer;
+  }
+
+  .header__nav {
+    font-weight: 300;
+    display: flex;
+    align-items: flex-start;
+    .nav__link {
+      @include underline(3px, $dark-1);
+      text-decoration: none;
+      color: $dark-1;
+      font-size: 1.75rem;
+      margin: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: $break-tablet) {
+  .content__header {
+    justify-content: space-between;
+
+    .header__title {
+      display: initial;
+    }
+  }
+}
