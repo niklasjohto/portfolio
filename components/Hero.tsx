@@ -17,7 +17,7 @@ const Hero = ({ children }: HeroProps) => {
       <motion.div
         className={Style.hero__image}
         initial={{ height: 0 }}
-        animate={{ height: "auto" }}
+        animate={{ height: "100%" }}
         transition={{
           duration: 1.5,
           ease: "easeInOut",
