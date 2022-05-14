@@ -53,7 +53,7 @@ const Home: NextPage = () => {
           </h3>
           <div className={Style.body__contact}>
             <div
-              className={Style.body__cursor}
+              className={Style.contact__cursor}
               style={{
                 ...cursorPos,
                 opacity: cursorHide ? 0 : 1,
