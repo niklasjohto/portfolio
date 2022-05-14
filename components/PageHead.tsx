@@ -10,7 +10,7 @@ const PageHead = ({ title }: PageHeadProps) => {
       <title>niklasjohto {title ? `- ${title}` : null}</title>
       <meta
         name="description"
-        content="A site about Niklasjohto and his projects"
+        content="A site about niklasjohto and his projects"
       />
 
       <link
