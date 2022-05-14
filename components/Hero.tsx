@@ -12,7 +12,7 @@ const Hero = ({ children }: HeroProps) => {
     <section className={Style.main__hero} data-section="Hero">
       <div className={Style.hero__content}>
         <Header />
-        <section className={Style.content__body}>{children}</section>
+        <div className={Style.content__body}>{children}</div>
       </div>
       <motion.div
         className={Style.hero__image}

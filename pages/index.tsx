@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <PageHead />
       <Layout>
         <Hero>
-          <h2 className={Style.content__title}>
+          <h2 className={Style.body__title}>
             {textToSpans("STUDENT &DEVELOPER", {
               initial: { opacity: 0, y: -50 },
               animate: { opacity: 1, y: 0 },
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               },
             })}
           </h2>
-          <h3 className={Style.content__location}>
+          <h3 className={Style.body__location}>
             {textToSpans(
               "BASED IN DENMARK",
               {
@@ -51,9 +51,9 @@ const Home: NextPage = () => {
               17
             )}
           </h3>
-          <div className={Style.content__contact}>
+          <div className={Style.body__contact}>
             <div
-              className={Style.contact__cursor}
+              className={Style.body__cursor}
               style={{
                 ...cursorPos,
                 opacity: cursorHide ? 0 : 1,
@@ -86,7 +86,7 @@ const Home: NextPage = () => {
                 target="_blank"
                 className={Style.socials__link}
               >
-                GitHub,
+                GITHUB,
               </a>
               <a
                 href="https://twitter.com/niklasjohto"
@@ -94,7 +94,7 @@ const Home: NextPage = () => {
                 target="_blank"
                 className={Style.socials__link}
               >
-                Twitter
+                TWITTER
               </a>
             </div>
           </div>
