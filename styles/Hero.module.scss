@@ -1,13 +1,11 @@
 @import "variables";
 
 .main__hero {
-  height: auto;
-
   font-family: $big-font;
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.2fr 0.3fr;
+  grid-template-rows: 1fr 15vh;
   gap: 1rem;
 
   .hero__content {
@@ -34,6 +32,7 @@
 @media screen and (min-width: $break-tablet) {
   .main__hero {
     gap: 2rem;
+    grid-template-rows: 1fr 25vh;
   }
 }
 
