@@ -15,12 +15,14 @@ const Profile = () => {
   const [cursorClick, setCursorClick] = useState(false);
   const [cursorHide, setCursorHide] = useState(true);
   const [cursorPos, setCursorPos] = useState({ top: 0, left: 0 });
-  const moveCursor = (event: any) => {
+  const moveCursor = (
+    event: React.MouseEvent<HTMLParagraphElement, MouseEvent>
+  ) => {
     setCursorPos({ top: event.pageY, left: event.pageX });
   };
 
   return (
-    <section data-section="Proifle" className={Style.main__profile}>
+    <section data-section="Profile" className={Style.main__profile}>
       <h2 className={Style.profile__title}>Hello! I&apos;m Niklas</h2>
       <div className={Style.profile__text}>
         <motion.p

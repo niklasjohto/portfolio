@@ -14,7 +14,9 @@ const Home: NextPage = () => {
   const [cursorClick, setCursorClick] = useState(false);
   const [cursorHide, setCursorHide] = useState(true);
   const [cursorPos, setCursorPos] = useState({ top: 0, left: 0 });
-  const moveCursor = (event: any) => {
+  const moveCursor = (
+    event: React.MouseEvent<HTMLParagraphElement, MouseEvent>
+  ) => {
     setCursorPos({ top: event.pageY, left: event.pageX });
   };
 
@@ -24,16 +26,20 @@ const Home: NextPage = () => {
       <Layout>
         <Hero>
           <h2 className={Style.body__title}>
-            {textToSpans("STUDENT &DEVELOPER", {
-              initial: { opacity: 0, y: -50 },
-              animate: { opacity: 1, y: 0 },
-              transition: {
-                duration: 0.075,
-                type: "spring",
-                damping: 25,
-                stiffness: 500,
+            {textToSpans(
+              "STUDENT &DEVELOPER",
+              {
+                initial: { opacity: 0, y: -50 },
+                animate: { opacity: 1, y: 0 },
+                transition: {
+                  duration: 0.075,
+                  type: "spring",
+                  damping: 25,
+                  stiffness: 500,
+                },
               },
-            })}
+              0.075
+            )}
           </h2>
           <h3 className={Style.body__location}>
             {textToSpans(
@@ -48,6 +54,7 @@ const Home: NextPage = () => {
                   stiffness: 500,
                 },
               },
+              0.075,
               17
             )}
           </h3>

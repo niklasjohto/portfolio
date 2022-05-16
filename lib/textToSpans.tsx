@@ -9,6 +9,7 @@ interface animate {
 const textToSpans = (
   text: string,
   animate: animate,
+  letterDelay: number = 0,
   offsetDelay: number = 0
 ): JSX.Element[] => {
   const letters = text.split("");
@@ -23,7 +24,7 @@ const textToSpans = (
         key={index}
         initial={{ ...animate.initial }}
         animate={{ ...animate.animate }}
-        transition={{ ...animate.transition, delay: delay * 0.075 }}
+        transition={{ ...animate.transition, delay: delay * letterDelay }}
       >
         {letter === " " ? <>&nbsp;</> : letter}
       </motion.span>
