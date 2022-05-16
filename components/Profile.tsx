@@ -25,10 +25,10 @@ const Profile = () => {
       <div className={Style.profile__text}>
         <motion.p
           className={Style.text__paragraph}
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.75,
             ease: "easeInOut",
           }}
           viewport={{ once: true, amount: "all" }}
@@ -39,10 +39,10 @@ const Profile = () => {
         </motion.p>
         <motion.p
           className={Style.text__paragraph}
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.75,
             ease: "easeInOut",
           }}
           viewport={{ once: true, amount: "all" }}
@@ -52,10 +52,10 @@ const Profile = () => {
         </motion.p>
         <motion.p
           className={Style.text__paragraph}
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.75,
             ease: "easeInOut",
           }}
           viewport={{ once: true, amount: "all" }}
