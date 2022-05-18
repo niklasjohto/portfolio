@@ -14,16 +14,14 @@
   }
 
   .header__nav {
-    font-weight: 300;
+    font-weight: 200;
     display: flex;
     align-items: flex-start;
     .nav__link {
-      @include underline(3px, $dark-1);
+      @include underline(1.5px, $dark-1);
       text-decoration: none;
       color: $dark-1;
       font-size: 1.75rem;
-      margin: 0;
-      overflow: hidden;
     }
   }
 }

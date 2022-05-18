@@ -53,8 +53,8 @@
         .socials__link {
           color: $dark-1;
           text-decoration: none;
-          @include underline(3px, $dark-1);
-          font-weight: 300;
+          @include underline(1.5px, $dark-1);
+          font-weight: 200;
         }
       }
     }

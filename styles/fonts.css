@@ -1,39 +1,30 @@
 /*
-  Pangram Pangram Agrandir
+  Pangram Pangram Telegraf
 */
 
 @font-face {
-  font-family: "PP Agrandir";
-  src: url("../public/fonts/PPAgrandir-Regular.woff2") format("woff2"),
-    url("../public/fonts/PPAgrandir-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Agrandir";
-  src: url("../public/fonts/PPAgrandir-TextBold.woff2") format("woff2"),
-    url("../public/fonts/PPAgrandir-TextBold.woff") format("woff");
+  font-family: "PP Telegraf";
+  src: url("../public/fonts/PPTelegraf-Bold.woff2") format("woff2"),
+    url("../public/fonts/PPTelegraf-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Agrandir";
-  src: url("../public/fonts/PPAgrandir-Regular.woff2") format("woff2"),
-    url("../public/fonts/PPAgrandir-Regular.woff") format("woff");
+  font-family: "PP Telegraf";
+  src: url("../public/fonts/PPTelegraf-Regular.woff2") format("woff2"),
+    url("../public/fonts/PPTelegraf-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Agrandir";
-  src: url("../public/fonts/PPAgrandir-TextBold.woff2") format("woff2"),
-    url("../public/fonts/PPAgrandir-TextBold.woff") format("woff");
-  font-weight: bold;
+  font-family: "PP Telegraf";
+  src: url("../public/fonts/PPTelegraf-UltraLight.woff2") format("woff2"),
+    url("../public/fonts/PPTelegraf-UltraLight.woff") format("woff");
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }

@@ -103,7 +103,7 @@ const Profile = () => {
             target="_blank"
             className={Style.socials__link}
           >
-            GitHub,
+            GITHUB,
           </a>
           <a
             href="https://twitter.com/niklasjohto"
@@ -111,7 +111,7 @@ const Profile = () => {
             target="_blank"
             className={Style.socials__link}
           >
-            Twitter
+            TWITTER
           </a>
         </div>
       </div>

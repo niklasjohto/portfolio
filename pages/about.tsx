@@ -21,7 +21,7 @@ const About: NextPage = () => {
             {textToSpans(
               "VIDEO GAMES,HOUSEPLANTS,EVERYTHING IT.",
               {
-                initial: { opacity: 0, y: -25 },
+                initial: { opacity: 0, y: -50 },
                 animate: { opacity: 1, y: 0 },
                 transition: {
                   duration: 0.05,
@@ -30,7 +30,7 @@ const About: NextPage = () => {
                   stiffness: 500,
                 },
               },
-              0.05
+              0.06
             )}
           </h2>
           <motion.div
@@ -43,7 +43,7 @@ const About: NextPage = () => {
               y: 0,
               opacity: 1,
             }}
-            transition={{ duration: 0.5, delay: 1.8, ease: "easeInOut" }}
+            transition={{ duration: 0.5, delay: 38 * 0.06, ease: "easeOut" }}
           >
             <MdKeyboardArrowDown />
           </motion.div>
