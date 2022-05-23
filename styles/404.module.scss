@@ -1,0 +1,27 @@
+@import "variables";
+@import "fonts";
+
+.wrapper {
+  @include page;
+
+  .wrapper__E404 {
+    align-self: center;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.75rem;
+
+    .E404__title {
+      font-family: $big-font;
+    }
+
+    .E404__image {
+      margin-top: 4rem;
+      height: 10vh;
+      background: url("../public/images/plant.jpg") no-repeat;
+      background-size: cover;
+      background-position: right;
+      border-radius: 5px;
+    }
+  }
+}
