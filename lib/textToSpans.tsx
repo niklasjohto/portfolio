@@ -1,19 +1,13 @@
-import { motion } from "framer-motion";
-
-interface animate {
-  initial: { [key: string]: string | number };
-  animate: { [key: string]: string | number };
-  transition: { [key: string]: string | number };
-}
+import { motion, MotionProps } from "framer-motion";
 
 const textToSpans = (
   text: string,
-  animate: animate,
+  animate: MotionProps,
   letterDelay: number = 0,
   offsetDelay: number = 0
 ): JSX.Element[] => {
   const letters = text.split("");
-  let delay = 0 + offsetDelay;
+  let delay = offsetDelay;
 
   return letters.map((letter, index) => {
     if (letter !== " ") {
@@ -22,8 +16,8 @@ const textToSpans = (
     return (
       <motion.span
         key={index}
-        initial={{ ...animate.initial }}
-        animate={{ ...animate.animate }}
+        initial={animate.initial}
+        animate={animate.animate}
         transition={{ ...animate.transition, delay: delay * letterDelay }}
       >
         {letter === " " ? <>&nbsp;</> : letter}
