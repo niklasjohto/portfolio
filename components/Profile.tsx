@@ -23,17 +23,17 @@ const Profile = () => {
 
   return (
     <section data-section="Profile" className={Style.main__profile}>
-      <h2 className={Style.profile__title}>Hello! I&apos;m Niklas</h2>
+      <h2 className={Style.profile__title}>HELLO! I&apos;M NIKLAS</h2>
       <div className={Style.profile__text}>
         <motion.p
           className={Style.text__paragraph}
-          initial={{ opacity: 0, y: -25 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -25 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.75,
             ease: "easeInOut",
           }}
-          viewport={{ once: true, amount: "all" }}
+          viewport={{ once: true, amount: "some" }}
         >
           I’m a student from Denmark,
           <br />I have around ~{yearsOfExp()} years of experience in IT & <br />
@@ -41,33 +41,42 @@ const Profile = () => {
         </motion.p>
         <motion.p
           className={Style.text__paragraph}
-          initial={{ opacity: 0, y: -25 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -25 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.75,
             ease: "easeInOut",
           }}
-          viewport={{ once: true, amount: "all" }}
+          viewport={{ once: true, amount: "some" }}
         >
           I’m very passionate about everything IT & enjoy learning technologies,
           some of my favorites being: React, TypeScript & Rust.
         </motion.p>
         <motion.p
           className={Style.text__paragraph}
-          initial={{ opacity: 0, y: -25 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -25 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.75,
             ease: "easeInOut",
           }}
-          viewport={{ once: true, amount: "all" }}
+          viewport={{ once: true, amount: "some" }}
         >
           When I’m not working I usually play video games, mess around with
           networks or take care of my many plants.
         </motion.p>
       </div>
 
-      <div className={Style.profile__contact}>
+      <motion.div
+        className={Style.profile__contact}
+        initial={{ opacity: 0.5 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 0.25,
+          ease: "easeInOut",
+        }}
+        viewport={{ once: true, amount: "all" }}
+      >
         <div
           className={Style.contact__cursor}
           style={{
@@ -114,7 +123,7 @@ const Profile = () => {
             TWITTER
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
