@@ -4,11 +4,12 @@ import { useState } from "react";
 import Style from "../styles/Home.module.scss";
 import textToSpans from "../lib/textToSpans";
 import copyToClipboard from "../lib/copyToClipboard";
-
 import PageHead from "../components/PageHead";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+
+import { motion } from "framer-motion";
 
 const Home: NextPage = () => {
   const [cursorClick, setCursorClick] = useState(false);
@@ -24,22 +25,41 @@ const Home: NextPage = () => {
     <div className={Style.wrapper}>
       <PageHead />
       <Layout>
-        <Hero>
+        <Hero bannerDelay={34 * 0.05}>
           <h2 className={Style.body__title}>
-            {textToSpans(
-              "STUDENT &DEVELOPER",
-              {
-                initial: { opacity: 0, y: -50 },
-                animate: { opacity: 1, y: 0 },
-                transition: {
-                  duration: 0.075,
-                  type: "spring",
-                  damping: 25,
-                  stiffness: 500,
+            <span className={Style.title__row}>
+              {textToSpans(
+                "STUDENT &",
+                {
+                  initial: { translateY: 100 },
+                  animate: {
+                    translateY: 0,
+                  },
+                  transition: {
+                    duration: 0.75,
+                    ease: [0.62, 0.05, 0.01, 0.99],
+                  },
                 },
-              },
-              0.075
-            )}
+                0.05
+              )}
+            </span>
+            <span className={Style.title__row}>
+              {textToSpans(
+                "DEVELOPER",
+                {
+                  initial: { translateY: 100 },
+                  animate: {
+                    translateY: 0,
+                  },
+                  transition: {
+                    duration: 0.75,
+                    ease: [0.62, 0.05, 0.01, 0.99],
+                  },
+                },
+                0.05,
+                8
+              )}
+            </span>
           </h2>
           <h3 className={Style.body__location}>
             {textToSpans(
@@ -47,18 +67,27 @@ const Home: NextPage = () => {
               {
                 initial: { opacity: 0 },
                 animate: { opacity: 1 },
-                transition: {
-                  duration: 0.075,
-                  type: "spring",
-                  damping: 25,
-                  stiffness: 500,
-                },
               },
-              0.075,
-              17
+              0.05,
+              20
             )}
           </h3>
-          <div className={Style.body__contact}>
+          <motion.div
+            className={Style.body__contact}
+            initial={{
+              y: -25,
+              opacity: 0,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1,
+              delay: 34 * 0.05,
+              ease: [0.62, 0.05, 0.01, 0.99],
+            }}
+          >
             <div
               className={Style.contact__cursor}
               style={{
@@ -104,7 +133,7 @@ const Home: NextPage = () => {
                 TWITTER
               </a>
             </div>
-          </div>
+          </motion.div>
         </Hero>
         <Projects />
       </Layout>

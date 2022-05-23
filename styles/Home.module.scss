@@ -10,8 +10,11 @@
       color: $dark-3;
       width: 9ch;
 
-      display: flex;
-      flex-wrap: wrap;
+      & > .title__row {
+        overflow: hidden;
+
+        display: flex;
+      }
     }
 
     .body__location {

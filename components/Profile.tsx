@@ -31,7 +31,7 @@ const Profile = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.75,
-            ease: "easeInOut",
+            ease: [0.62, 0.05, 0.01, 0.99],
           }}
           viewport={{ once: true, amount: "some" }}
         >
@@ -45,7 +45,7 @@ const Profile = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.75,
-            ease: "easeInOut",
+            ease: [0.62, 0.05, 0.01, 0.99],
           }}
           viewport={{ once: true, amount: "some" }}
         >
@@ -58,7 +58,7 @@ const Profile = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{
             duration: 0.75,
-            ease: "easeInOut",
+            ease: [0.62, 0.05, 0.01, 0.99],
           }}
           viewport={{ once: true, amount: "some" }}
         >
@@ -69,7 +69,7 @@ const Profile = () => {
 
       <motion.div
         className={Style.profile__contact}
-        initial={{ opacity: 0.5 }}
+        initial={{ opacity: 0.4 }}
         whileInView={{ opacity: 1 }}
         transition={{
           duration: 0.25,

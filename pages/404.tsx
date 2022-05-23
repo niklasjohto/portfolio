@@ -2,13 +2,14 @@ import Style from "../styles/404.module.scss";
 
 import Header from "../components/Header";
 import PageHead from "../components/PageHead";
+
 import { motion } from "framer-motion";
 
 const E404 = () => {
   return (
     <div className={Style.wrapper}>
       <PageHead title="404"></PageHead>
-      <Header />
+      <Header headerDelay={0} />
       <motion.div
         className={Style.wrapper__E404}
         initial={{ opacity: 0 }}

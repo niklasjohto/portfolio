@@ -9,9 +9,13 @@
       font-size: clamp(2.25rem, 10vw, 5rem);
       color: $dark-3;
       width: 11.65ch;
+      overflow: hidden;
 
-      display: flex;
-      flex-wrap: wrap;
+      & > .title__row {
+        overflow: hidden;
+
+        display: flex;
+      }
     }
 
     .body__arrow {

@@ -1,5 +1,7 @@
-import Style from "../styles/Projects.module.scss";
 import React from "react";
+
+import Style from "../styles/Projects.module.scss";
+
 import { motion } from "framer-motion";
 
 const projects = [
@@ -30,7 +32,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.5,
-                ease: "easeInOut",
+                ease: [0.62, 0.05, 0.01, 0.99],
               }}
               viewport={{ once: true, amount: "all" }}
             >
