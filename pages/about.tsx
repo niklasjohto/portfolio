@@ -15,7 +15,7 @@ const About: NextPage = () => {
     <div className={Style.wrapper}>
       <PageHead title="about" />
       <Layout>
-        <Hero bannerDelay={38 * 0.05}>
+        <Hero bannerDelay={1.5}>
           <h2 className={Style.body__title}>
             <span className={Style.title__row}>
               {textToSpans(
@@ -30,7 +30,7 @@ const About: NextPage = () => {
                     ease: [0.62, 0.05, 0.01, 0.99],
                   },
                 },
-                0.05
+                0.5 / 12
               )}
             </span>
             <span className={Style.title__row}>
@@ -46,8 +46,8 @@ const About: NextPage = () => {
                     ease: [0.62, 0.05, 0.01, 0.99],
                   },
                 },
-                0.05,
-                12
+                0.5 / 12,
+                0.5
               )}
             </span>
             <span className={Style.title__row}>
@@ -63,8 +63,8 @@ const About: NextPage = () => {
                     ease: [0.62, 0.05, 0.01, 0.99],
                   },
                 },
-                0.05,
-                24
+                0.5 / 14,
+                1
               )}
             </span>
           </h2>
@@ -80,7 +80,7 @@ const About: NextPage = () => {
             }}
             transition={{
               duration: 1,
-              delay: 38 * 0.05,
+              delay: 1.5,
               ease: [0.62, 0.05, 0.01, 0.99],
             }}
           >

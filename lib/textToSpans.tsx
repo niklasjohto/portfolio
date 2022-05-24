@@ -7,7 +7,7 @@ const textToSpans = (
   offsetDelay: number = 0
 ): JSX.Element[] => {
   const letters = text.split("");
-  let delay = offsetDelay;
+  let delay = 0;
 
   return letters.map((letter, index) => {
     if (letter !== " ") {
@@ -18,7 +18,10 @@ const textToSpans = (
         key={index}
         initial={animate.initial}
         animate={animate.animate}
-        transition={{ ...animate.transition, delay: delay * letterDelay }}
+        transition={{
+          ...animate.transition,
+          delay: offsetDelay + delay * letterDelay,
+        }}
       >
         {letter === " " ? <>&nbsp;</> : letter}
       </motion.span>
