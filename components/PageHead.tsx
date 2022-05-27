@@ -7,7 +7,7 @@ interface PageHeadProps {
 const PageHead = ({ title }: PageHeadProps) => {
   return (
     <Head>
-      <title>niklasjohto {title ? `- ${title}` : null}</title>
+      <title>niklasjohto {title ? `/ ${title}` : null}</title>
       <meta
         name="description"
         content="A site about niklasjohto and his projects"

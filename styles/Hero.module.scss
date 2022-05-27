@@ -31,14 +31,14 @@
 
 @media screen and (min-width: $break-tablet) {
   .main__hero {
-    gap: 2rem;
+    gap: 1.5rem;
     grid-template-rows: 1fr 25vh;
   }
 }
 
 @media screen and (min-width: $break-desktop) {
   .main__hero {
-    gap: 3rem;
+    gap: 2rem;
     height: calc(100vh - 4rem);
 
     grid-template-columns: 3fr 1.5fr;
