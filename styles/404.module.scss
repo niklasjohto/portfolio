@@ -4,24 +4,67 @@
 .wrapper {
   @include page;
 
-  .wrapper__E404 {
+  header {
+    z-index: 2;
+  }
+
+  .wrapper__error {
+    z-index: 2;
     align-self: center;
-    max-width: 500px;
-    width: 100%;
     text-align: center;
-    font-size: 1.75rem;
+    max-width: 1000px;
+    width: 100%;
+    font-size: clamp(1.5rem, 10vw, 5rem);
 
-    .E404__title {
-      font-family: $big-font;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .error__home {
+      width: max-content;
+      align-self: center;
+      text-decoration: none;
+      color: $dark-1;
+      border-bottom: 3px solid $dark-1;
     }
+  }
 
-    .E404__image {
-      margin-top: 4rem;
-      height: 10vh;
-      background: url("../public/images/plant.jpg") no-repeat;
-      background-size: cover;
-      background-position: right;
-      border-radius: 5px;
+  .wrapper__bgr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: clamp(12.5rem, 40vw, 40vw);
+    overflow: hidden;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    color: $dark-3;
+    user-select: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: $break-tablet) {
+  .wrapper {
+    .wrapper__bgr {
+      text-orientation: initial;
+      writing-mode: initial;
+    }
+  }
+}
+
+@media screen and (min-width: $break-desktop) {
+  .wrapper {
+    .wrapper__error {
+      .error__home {
+        border: none;
+        @include underline(3px, $dark-1);
+      }
     }
   }
 }
