@@ -11,12 +11,6 @@ const projects = [
     desc: "A tool utilizing the UniFi controller’s local REST API",
     langs: ["TYPESCRIPT"],
   },
-  {
-    title: "C# SNAKE",
-    href: "https://github.com/niklasjohto/csharp_snake",
-    desc: "A video game classic made into a simple console game",
-    langs: ["C#"],
-  },
 ];
 
 const Projects = () => {
